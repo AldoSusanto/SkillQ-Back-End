@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://34.101.147.225:3306/skillq
+    username: root
+    password: '@ASDlkj234'
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
