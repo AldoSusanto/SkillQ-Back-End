@@ -7,10 +7,7 @@ import com.skillq.main.repository.CourseRepository;
 import com.skillq.main.repository.UserCourseRepository;
 import com.skillq.main.util.BusinessException;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -32,11 +29,12 @@ public class CourseController {
         return courseRepository.findAll();
     }
 
-    @GetMapping("/{courseId}")
-    private Course getCourseById(@RequestBody String courseId){
-        return courseRepository.findById(courseId)
-                .orElseThrow(() -> new BusinessException(HttpStatus.NOT_FOUND, "00004", "Course with course ID: " + courseId + " not found"));
-    }
+    //todo: getting ambiguous mapping error eventhough this one has request param
+//    @GetMapping("/")
+//    private Course getCourseById(@RequestParam String courseId){
+//        return courseRepository.findById(courseId)
+//                .orElseThrow(() -> new BusinessException(HttpStatus.NOT_FOUND, "00004", "Course with course ID: " + courseId + " not found"));
+//    }
 
     @GetMapping("/current/chapter/")
     private UserCourse getCurrentChapterOfUser(@Valid @RequestBody GetUserCurrentChapterRequest request){

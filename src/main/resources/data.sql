@@ -11,3 +11,15 @@ insert into chapter values('PFN-006', '6','001', 'PFN-6 description', '0013', 'E
 
 insert into chapter values('WED-001', '1','002', 'Wedding Desc', null, 'Wedding intro', 'VIDEO', 'gyAkztusEik')
 insert into chapter values('INV-001', '1','003', 'Investment Desc', null, 'Investment intro', 'VIDEO', 'UIKXwmX9dFk')
+
+insert into question values('000001', 'PFN-002', 'this is hint 1', null, 'hint 3', null, 'optionA', 'optionB', 'optionC', 'optionD', 'This is just a dummy question', 'MCQ')
+insert into question values('000002', 'PFN-002', 'this is hint 1', null, 'hint 3', null, 'An expression', 'two', 'A math calculation', 'one', 'What is one plus one ?', 'MCQ')
+insert into question values('000003', 'PFN-004', 'this is hint 1', null, 'hint 3', null, 'optionA', 'optionB', 'optionC', 'optionD', 'This is just a dummy question', 'MCQ')
+insert into question values('000004', 'PFN-001', 'this is hint 1', null, 'hint 3', null, 'optionA', 'optionB', 'optionC', 'optionD', 'This is just a dummy question', 'MCQ')
+insert into question values('000005', 'PFN-001', 'this is hint 1', null, 'hint 3', null, 'An expression', 'two', 'A math calculation', 'one', 'What is one plus one ?', 'MCQ')
+
+insert into question_answer values('100001', 'optionA', '000001')
+insert into question_answer values('100002', 'one', '000002')
+insert into question_answer values('100003', 'optionA', '000003')
+insert into question_answer values('100004', 'optionA', '000004')
+insert into question_answer values('100005', 'one', '000005')

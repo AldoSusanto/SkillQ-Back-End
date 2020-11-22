@@ -1,9 +1,11 @@
 spring:
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://34.101.147.225:3306/skillq
-    username: root
-    password: '@ASDlkj234'
+#    driverClassName: com.mysql.jdbc.Driver #for GCP
+#    url: jdbc:mysql://34.101.147.225:3306/skillq # for GCP
+#    username: root
+#    password: '@ASDlkj234'
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb
   jpa:
     hibernate.ddl-auto: create
     generate-ddl: true

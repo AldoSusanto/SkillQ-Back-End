@@ -1,10 +1,10 @@
 package com.skillq.main.controller;
 
-import com.skillq.main.model.request.LoginRequest;
-import com.skillq.main.service.CreateUserService;
 import com.skillq.main.model.entity.User;
 import com.skillq.main.model.request.CreateUserRequest;
+import com.skillq.main.model.request.LoginRequest;
 import com.skillq.main.repository.UserRepository;
+import com.skillq.main.service.CreateUserService;
 import com.skillq.main.service.LoginService;
 import com.skillq.main.util.BusinessException;
 import org.springframework.http.HttpStatus;
@@ -40,7 +40,7 @@ public class UserController {
                         new BusinessException(HttpStatus.NOT_FOUND, "00003", "User with Username " + username + " doesn't exist"));
     }
 
-    @PostMapping("/")
+    @PostMapping("/register")
     private User createNewUser(@Valid @RequestBody CreateUserRequest userRequest){
         return createUserService.execute(userRequest);
     }
